@@ -1,0 +1,25 @@
+<!doctype html>
+<script type="text/javascript">
+function selectFolder(e) {
+    let theFiles = e.target.files;
+    let relativePath = theFiles[0].webkitRelativePath;
+    let folder = relativePath.split("/");
+    let folderName = document.getElementById("folderName")
+    folderName.value = folder[0]
+}
+</script>
+
+<title>Upload</title>
+<h2>Choose the folder to upload to your put.io account</h2>
+
+<form method="post" action="{{url_for('upload')}}" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" onchange="selectFolder(event)" name="files[]" multiple="true" autocomplete="off" webkitdirectory directory required>
+			<input type="hidden" id="folderName" name="folderName" value="">
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
