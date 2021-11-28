@@ -3,8 +3,8 @@ from requests_oauthlib import OAuth2Session
 from werkzeug.utils import secure_filename
 import os, io, re
 
-client_id = "5487"
-client_secret = "5M4BAC5P4XG7CF6CVQN3"
+client_id = "***"
+client_secret = "***"
 authorization_base_url = 'https://api.put.io/v2/oauth2/authenticate/'
 token_url = 'https://api.put.io/v2/oauth2/access_token/'
 
