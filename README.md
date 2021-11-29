@@ -69,3 +69,22 @@ token_url = 'https://api.put.io/v2/oauth2/access_token/'
 def index():
     return render_template("index.html")
 ```
+
+* OAuth2 Authentication Flow
+
+```python
+@app.route("/login")
+def login():
+    client = OAuth2Session(client_id)
+    authorization_url, state = client.authorization_url(authorization_base_url)
+    session['oauth_state'] = state
+    return redirect(authorization_url)
+
+@app.route("/callback", methods=["GET","POST"])
+def callback():
+    if request.method == "GET":
+        client = OAuth2Session(client_id, state=session['oauth_state'], token='***')
+        token = client.fetch_token(token_url, client_secret=client_secret, authorization_response=request.url, include_client_id=True)
+        session['oauth_token'] = token
+        return redirect(url_for('upload'))
+```
