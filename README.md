@@ -119,7 +119,7 @@ function selectFolder(e) {
 }
 </script>
 ```
-* 
+* Get root folder's name
 ```python
 root_folder = request.form["folderName"]
 ```
