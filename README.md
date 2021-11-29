@@ -105,3 +105,21 @@ files = request.files.getlist('files[]')
 For the content to be uploaded to be a folder, "webkitdirectory directory" must be added to the input tag.
 
 ---
+
+* The string at index 0 of the array formed by separating the directory name of one of the files uploaded with javascript with slash can be accepted as the root directory. (e.g. "uploaded-folder/sub-folder/sub-sub-folder" => ["uploaded-folder","sub-folder","sub-sub-folder"][0] = "uploaded-folder"
+
+```html
+<script type="text/javascript">
+function selectFolder(e) {
+    let theFiles = e.target.files;
+    let relativePath = theFiles[0].webkitRelativePath;
+    let folder = relativePath.split("/");
+    let folderName = document.getElementById("folderName")
+    folderName.value = folder[0]
+}
+</script>
+```
+* 
+```python
+root_folder = request.form["folderName"]
+```
