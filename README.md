@@ -143,3 +143,21 @@ def join(arg):
 file_name = secure_filename(file.filename)
 file.save(os.path.join(app.config['UPLOAD_FOLDER'], splitter(file_name)[-1]))
 ```
+
+* The names and IDs of created folders are stored in a dictionary called created_folders. When a new file is to be uploaded, the previously created top-level root directory of the directory where the file is located is searched. After the root directory is found, subfolders are created under that directory and the file upload process is completed.
+
+```python
+with io.open(splitter(file_name)[-1], 'rb') as f:
+  files = {"file":(splitter(file_name)[-1],f)}
+  if "_".join(splitter(file_name)[:-1]) in created_folders:
+      client.post('https://upload.put.io/v2/files/upload', data={"parent_id":created_folders["_".join(splitter(file_name)[:-1])]}, files=files)
+  else:
+      for i in range(1,len(splitter(file_name))+1):
+          if join(splitter(file_name)[0:-i]) in created_folders:
+              for j in splitter(file_name)[-i:-1]:
+                  api_response = client.post('https://api.put.io/v2/files/create-folder',data={"name":j,"parent_id":created_folders[join(splitter(file_name)[0:-i])]})
+                  i -= 1
+                  created_folders[join(splitter(file_name)[0:-i])] = api_response.json()["file"]["id"]
+                  break
+              client.post('https://upload.put.io/v2/files/upload', data={"parent_id":api_response.json()["file"]["id"]}, files=files)
+```
