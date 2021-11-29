@@ -19,7 +19,7 @@ This application is containerized and deployed to Cloud Run. For more informatio
 * [Flask](https://flask.palletsprojects.com/) - The framework used
 * [Pip](https://pypi.org/project/pip/) - Dependency Management
 * [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - OAuth2 Authentication
-* [werkzeug.secure_filename](https://werkzeug.palletsprojects.com/en/2.0.x/utils/#werkzeug.utils.secure_filename) - Processes a filename and returns a secure version of it
+* [werkzeug.secure_filename](https://werkzeug.palletsprojects.com/en/2.0.x/utils/#werkzeug.utils.secure_filename) - Processes a filename and returns a safe version of it
 
 ### Virtual environments
 
@@ -34,6 +34,10 @@ Install all project dependencies using:
 $ pip install -r requirements.txt
 ```
 
-## Usage
+## Deploying
 
+After installing [Cloud SDK](https://cloud.google.com/sdk/docs/install), run the following command in the directory where the application is located.
 
+```
+$ gcloud run deploy
+```
