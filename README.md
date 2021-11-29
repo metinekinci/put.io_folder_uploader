@@ -5,9 +5,9 @@
 
 This article aims to document the case study in the recruitment process of put.io.
 
-##Introduction
-This Flask app uploads a folder and its contents to your put.io account
-
+## Introduction
+This application uploads a folder and its contents to your put.io account using the put.io API.
+This application is containerized and deployed to Cloud Run. [For more information.](https://github.com/user/repo/blob/branch/other_file.md) 
 ## Installation
 Required modules for Flask application(server-side)
 ```bash
@@ -18,4 +18,5 @@ pip install requests
 ## Usage
 
 ```python
+
 https://putio-nh537hdurq-uc.a.run.app/
