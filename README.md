@@ -53,3 +53,19 @@ from werkzeug.utils import secure_filename
 import os, io, re
 ```
 
+* The information required to access the Put.io API is assigned to variables as follows.
+
+```python
+client_id = "***"
+client_secret = "***"
+authorization_base_url = 'https://api.put.io/v2/oauth2/authenticate/'
+token_url = 'https://api.put.io/v2/oauth2/access_token/'
+```
+
+* The start page is rendered. When we reach the home page of the web application, we get information about the application and a button to log in to the Put.io account directs us to the login page.
+
+```python
+@app.route("/")
+def index():
+    return render_template("index.html")
+```
