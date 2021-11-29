@@ -131,3 +131,15 @@ created_folders[root_folder] = api_response.json()["file"]["id"]
 ```
 
 * Directory names separated by secure_filename with slash are formatted to be separated by underscore.(e.g. "root-folder/folder/sub-folder" => "root-folder_folder_sub-folder")To save files with filenames, the file directories are separated by underscores. The last element in the resulting list is equal to the file name.(e.g. ["root-folder", "folder", "sub-folder"][-1] = "sub-folder")
+
+```python
+def splitter(arg):
+    return re.split("_",arg)
+def join(arg):
+    return "_".join(arg)
+```
+
+```python
+file_name = secure_filename(file.filename)
+file.save(os.path.join(app.config['UPLOAD_FOLDER'], splitter(file_name)[-1]))
+```
