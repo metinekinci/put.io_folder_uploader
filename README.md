@@ -168,4 +168,4 @@ os.remove(splitter(file_name)[-1])
 ```
 ## Conclusion
 
-This application has two weaknesses. First, if the folder name contains underscores, the application will not work properly. This is because a folder is separated from the folder in its parent directory by an underscore. Second, an empty folder in the folder loaded in the HTML page cannot be resolved.
+This application has two weaknesses. First, if the folder name contains underscores, the application will not work properly. This is because a folder is separated from the folder in its parent directory by an underscore. However, this problem can be fixed if a slash is used as a separator in file names. Secondly, an empty folder cannot be resolved in the folder that is loaded in the HTML page.
