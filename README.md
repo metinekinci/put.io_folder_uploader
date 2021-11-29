@@ -3,8 +3,10 @@
 
 # About The Project
 
-This article aims to document the case study in the recruitment process by put.io. In this study, respectively:
+This article aims to document the case study in the recruitment process of put.io.
 
+##Introduction
+This Flask app uploads a folder and its contents to your put.io account
 
 ## Installation
 Required modules for Flask application(server-side)
