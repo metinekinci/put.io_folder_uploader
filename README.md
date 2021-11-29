@@ -130,7 +130,7 @@ api_response = client.post('https://api.put.io/v2/files/create-folder',data={"na
 created_folders[root_folder] = api_response.json()["file"]["id"]
 ```
 
-* Directory names separated by secure_filename with slash are formatted to be separated by underscore.(e.g. "root-folder/folder/sub-folder" => "root-folder_folder_sub-folder")To save files with filenames, the file directories are separated by underscores. The last element in the resulting list is equal to the file name.(e.g. ["root-folder", "folder", "sub-folder"][-1] = "sub-folder")
+* Directory names separated by secure_filename with slash are formatted to be separated by underscore.(e.g. "root-folder/folder/file" => "root-folder_folder_file")To save files with filenames, the file directories are separated by underscores. The last element in the resulting list is equal to the file name.(e.g. ["root-folder", "folder", "file"][-1] = "file"). The files are saved on the server under these file names.
 
 ```python
 def splitter(arg):
