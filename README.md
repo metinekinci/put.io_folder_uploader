@@ -91,13 +91,6 @@ def callback():
 
 * On the Upload page, there is a button to select the folder to upload. Then the file upload process is started with the Submit button. The files uploaded on this page are transferred to the backend under the name of the input tag, namely files[].
 
----
-**NOTE**
-
-For the content to be uploaded to be a folder, "webkitdirectory directory" must be added to the input tag.
-
----
-
 ```html
 <input type="file" onchange="selectFolder(event)" name="files[]" multiple="true" autocomplete="off" webkitdirectory directory required>
 ```
@@ -105,3 +98,10 @@ For the content to be uploaded to be a folder, "webkitdirectory directory" must 
 ```python
 files = request.files.getlist('files[]')
 ```
+
+---
+**NOTE**
+
+For the content to be uploaded to be a folder, "webkitdirectory directory" must be added to the input tag.
+
+---
