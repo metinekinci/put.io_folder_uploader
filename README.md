@@ -15,7 +15,8 @@ This application is containerized and deployed to Cloud Run. For more informatio
 * [Python](https://www.python.org/) - Programming Language
 * [Flask](https://flask.palletsprojects.com/) - The framework used
 * [Pip](https://pypi.org/project/pip/) - Dependency Management
-* 
+* [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - OAuth2 Authentication
+
 ## Installation
 Required modules for Flask application(server-side)
 ```bash
