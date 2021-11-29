@@ -44,7 +44,7 @@ gcloud run deploy
 
 ## How It Works
 
-*Required modules are imported
+* Required modules are imported
 
 ```python
 from flask import Flask, request, redirect, session, url_for, render_template
