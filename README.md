@@ -23,21 +23,26 @@ This application is containerized and deployed to Cloud Run. For more informatio
 
 ## Virtual environments
 
-```
-$ sudo apt-get install python-virtualenv
-$ python3 -m venv venv
-$ . venv/bin/activate
+```bash
+sudo apt-get install python-virtualenv
+python3 -m venv venv
+. venv/bin/activate
 ```
 Install all project dependencies using:
 
-```
-$ pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
 ```
 
 ## Deploying
 
 After installing [Cloud SDK](https://cloud.google.com/sdk/docs/install), run the following command in the directory where the application is located.
 
+```bash
+gcloud run deploy
 ```
-$ gcloud run deploy
-```
+
+## How It Works
+
+
+
