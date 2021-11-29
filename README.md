@@ -11,6 +11,8 @@ This application is containerized and deployed to Cloud Run. For more informatio
 
 [Put.io API Reference](https://api.put.io)
 
+[Working application link](https://putio-nh537hdurq-uc.a.run.app/)
+
 ## Dependencies
 
 * [Python](https://www.python.org/) - Programming Language
@@ -33,4 +35,4 @@ $ pip install -r requirements.txt
 
 ## Usage
 
-https://putio-nh537hdurq-uc.a.run.app/
+
