@@ -17,15 +17,19 @@ This application is containerized and deployed to Cloud Run. For more informatio
 * [Pip](https://pypi.org/project/pip/) - Dependency Management
 * [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - OAuth2 Authentication
 
-## Installation
-Required modules for Flask application(server-side)
-```bash
-pip install flask
-pip install requests_oauthlib
-pip install requests
+### Virtual environments
+
+```
+$ sudo apt-get install python-virtualenv
+$ python3 -m venv venv
+$ . venv/bin/activate
+```
+Install all project dependencies using:
+
+```
+$ pip install -r requirements.txt
+```
 
 ## Usage
-
-```python
 
 https://putio-nh537hdurq-uc.a.run.app/
