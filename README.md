@@ -44,5 +44,12 @@ gcloud run deploy
 
 ## How It Works
 
+*Required modules are imported
 
+```python
+from flask import Flask, request, redirect, session, url_for, render_template
+from requests_oauthlib import OAuth2Session
+from werkzeug.utils import secure_filename
+import os, io, re
+```
 
