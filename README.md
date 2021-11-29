@@ -70,7 +70,7 @@ def index():
     return render_template("index.html")
 ```
 
-* Redirects to the "/upload.html" page for uploading files after OAuth2 authentication.
+* Redirects to the "/upload" page for uploading files after OAuth2 authentication.
 
 ```python
 @app.route("/login")
@@ -87,4 +87,19 @@ def callback():
         token = client.fetch_token(token_url, client_secret=client_secret, authorization_response=request.url, include_client_id=True)
         session['oauth_token'] = token
         return redirect(url_for('upload'))
+```
+
+* On the Upload page, there is a button to select the folder to upload. Then the file upload process is started with the Submit button. The files uploaded on this page are transferred to the backend under the name of the input tag, namely files[].
+
+---
+**NOTE**
+For the content to be uploaded to be a folder, "webkitdirectory directory" must be added to the input tag.
+---
+
+```html
+<input type="file" onchange="selectFolder(event)" name="files[]" multiple="true" autocomplete="off" webkitdirectory directory required>
+```
+
+```python
+files = request.files.getlist('files[]')
 ```
