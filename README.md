@@ -21,7 +21,7 @@ This application is containerized and deployed to Cloud Run. For more informatio
 * [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - OAuth2 Authentication
 * [werkzeug.secure_filename](https://werkzeug.palletsprojects.com/en/2.0.x/utils/#werkzeug.utils.secure_filename) - Processes a filename and returns a safe version of it
 
-### Virtual environments
+## Virtual environments
 
 ```
 $ sudo apt-get install python-virtualenv
