@@ -166,3 +166,6 @@ with io.open(splitter(file_name)[-1], 'rb') as f:
 ```python
 os.remove(splitter(file_name)[-1])
 ```
+## Conclusion
+
+This application has two weaknesses. First, if the folder name contains underscores, the application will not work properly. This is because a folder is separated from the folder in its parent directory by an underscore. Second, an empty folder in the folder loaded in the HTML page cannot be resolved.
