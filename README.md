@@ -123,3 +123,11 @@ function selectFolder(e) {
 ```python
 root_folder = request.form["folderName"]
 ```
+* The root folder is created in the Put.io account and the ID of the created folder is stored in the dictionary of created folders.
+
+```python
+api_response = client.post('https://api.put.io/v2/files/create-folder',data={"name":root_folder})
+created_folders[root_folder] = api_response.json()["file"]["id"]
+```
+
+* Directory names separated by secure_filename with slash are formatted to be separated by underscore.(e.g. "root-folder/folder/sub-folder" => "root-folder_folder_sub-folder")To save files with filenames, the file directories are separated by underscores. The last element in the resulting list is equal to the file name.(e.g. ["root-folder", "folder", "sub-folder"][-1] = "sub-folder")
