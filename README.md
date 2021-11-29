@@ -93,7 +93,9 @@ def callback():
 
 ---
 **NOTE**
+
 For the content to be uploaded to be a folder, "webkitdirectory directory" must be added to the input tag.
+
 ---
 
 ```html
