@@ -34,7 +34,7 @@ def login():
 @app.route("/callback", methods=["GET","POST"])
 def callback():
     if request.method == "GET":
-        client = OAuth2Session(client_id, state=session['oauth_state'], token='KG5BAPVQ3WX22VMB3WXC')
+        client = OAuth2Session(client_id, state=session['oauth_state'], token='***')
         token = client.fetch_token(token_url, client_secret=client_secret, authorization_response=request.url, include_client_id=True)
         session['oauth_token'] = token
         return redirect(url_for('upload'))
