@@ -1,8 +1,5 @@
 # put.io Interview Project
 
-
-# About The Project
-
 This article aims to document the case study in the recruitment process of put.io.
 
 ## Introduction
