@@ -70,7 +70,7 @@ def index():
     return render_template("index.html")
 ```
 
-* OAuth2 Authentication Flow
+* Redirects to the "/upload.html" page for uploading files after OAuth2 authentication.
 
 ```python
 @app.route("/login")
