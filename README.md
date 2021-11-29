@@ -161,3 +161,8 @@ with io.open(splitter(file_name)[-1], 'rb') as f:
                   break
               client.post('https://upload.put.io/v2/files/upload', data={"parent_id":api_response.json()["file"]["id"]}, files=files)
 ```
+* The saved file is deleted from the server.
+
+```python
+os.remove(splitter(file_name)[-1])
+```
