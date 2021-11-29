@@ -10,6 +10,12 @@ This application is containerized and deployed to Cloud Run. For more informatio
 [Google Cloud Run](https://cloud.google.com/sdk/gcloud/reference/run/deploy)
 [Put.io API Reference](https://api.put.io)
 
+## Dependencies
+
+* [Python](https://www.python.org/) - Programming Language
+* [Flask](https://flask.palletsprojects.com/) - The framework used
+* [Pip](https://pypi.org/project/pip/) - Dependency Management
+* 
 ## Installation
 Required modules for Flask application(server-side)
 ```bash
