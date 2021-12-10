@@ -1,6 +1,6 @@
 # The Project
 
-This article aims to explain the application that uploads a folder directly to your put.io account
+This article aims to explain the application that uploads a folder directly to your put.io account.
 
 ## Introduction
 This application uploads a folder and its contents to your put.io account using the put.io API.
