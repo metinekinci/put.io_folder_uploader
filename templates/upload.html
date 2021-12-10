@@ -14,10 +14,10 @@ function selectFolder(e) {
 
 <form method="post" action="{{url_for('upload')}}" enctype="multipart/form-data">
     <dl>
-		<p>
-			<input type="file" onchange="selectFolder(event)" name="files[]" multiple="true" autocomplete="off" webkitdirectory directory required>
-			<input type="hidden" id="folderName" name="folderName" value="">
-		</p>
+	<p>
+		<input type="file" onchange="selectFolder(event)" name="files[]" multiple="true" autocomplete="off" webkitdirectory directory required>
+		<input type="hidden" id="folderName" name="folderName" value="">
+	</p>
     </dl>
     <p>
 		<input type="submit" value="Submit">
