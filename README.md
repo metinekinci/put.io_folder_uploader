@@ -1,6 +1,6 @@
-# put.io Interview Project
+# The Project
 
-This article aims to document the case study in the recruitment process of put.io.
+This article aims to explain the application that uploads a folder directly to your put.io account
 
 ## Introduction
 This application uploads a folder and its contents to your put.io account using the put.io API.
@@ -10,8 +10,6 @@ This application is containerized and deployed to Cloud Run. For more informatio
 [Google Cloud Run](https://cloud.google.com/sdk/gcloud/reference/run/deploy)
 
 [Put.io API Reference](https://api.put.io)
-
-[Working application link](https://putio-nh537hdurq-uc.a.run.app/)
 
 ## Dependencies
 
